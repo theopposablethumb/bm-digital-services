@@ -11,20 +11,19 @@ p, nav {font-size: 1.2em; line-height: 1.6em;}
 p {margin: 1.6em 0 0 0;}
 a {color: #96A8FF;}
 
-h1 span {background: rgba(34, 34, 34, 0.8); padding: 0 0.2em;}
+
 
 header, section, footer {padding: 1em 7vw; box-sizing: border-box; }
-header, footer {background: rgba(34, 34, 34, 0.6);}
-header {position: absolute; width: 100vw; z-index: 2;}
+header, footer {background: rgba(34, 34, 34, 0.8);}
+header {width: 100vw;}
 section {margin: 3em 0 0 0;}
 header h1 {font-size: 1.2em; letter-spacing: 0.07em; color: #96A8FF; border-bottom: none; display: inline-block; width: fit-content; padding: 0.5em 0; margin: 0;}
 header nav {float: right;}
 nav a {display: inline-block; padding: 0.5em 1em;}
 
 section#hero {position: relative; padding: 0; margin: 0; border-bottom: 1px solid #666;}
-section#hero img {margin: 0;padding: 0; width: 100vw; height: 100vh; object-fit: cover; display: block;}
-section#hero div {position: absolute;}
-section#hero div.home {left: 7vw; top: 10vh;}
+section#hero img {margin: 0; padding: 0; width: 100vw; height: 100vh; object-fit: cover; display: block;}
+section#hero div {position: absolute; width: 50%; height: 100%; box-sizing: border-box; padding: 0 7vw; top: 0; left: 0; background: rgba(34, 34, 34, 0.8);}
 section#hero h1 {font-size: 6em; border-bottom: none; width: 40vw;}
 section#hero p {font-size: 1.6em; width: 30vw;}
 
@@ -61,7 +60,7 @@ footer p {font-size: 1em; display: inline-block; width: content-fit;}
 	
 	section#hero {overflow: auto; background: rgba(34, 34, 34, 0.6);}
 	section#hero img {float: right; width: 50vw;}
-	section#hero div {float: left; position: static; box-sizing: border-box; width: 50vw; margin-top: 4em; padding: 0 1em; text-align: center;}
+	section#hero div {float: left; position: static; box-sizing: border-box; width: 50vw; margin-top: 4em; padding: 0 1em; text-align: center; background: none;}
 	section#hero h1 {font-size: 2.4em;  text-align: center; margin: 0; width: auto;}
 	section#hero p {font-size: 1.2em; margin: 1.2em 0 0; padding: 0 2em; width: auto;}
 	section#hero h1 span {background: none;}
