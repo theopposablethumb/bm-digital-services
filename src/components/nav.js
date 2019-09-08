@@ -8,6 +8,7 @@ class Nav extends React.Component {
             <nav>
                 <Link to="/">Home</Link>
                 Digital Services
+                <Link to="/photography">Photography</Link>
                 <Link to="/contact">Contact</Link>
             </nav>
         )
