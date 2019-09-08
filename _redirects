@@ -1,3 +1,2 @@
 https://bmdigitalservices.netlify.com/* https://www.brendanmeachen.com/:splat 301!
-/photography /index.html
-/*    /index.html   200
+/*    /index.html:splat   200!
