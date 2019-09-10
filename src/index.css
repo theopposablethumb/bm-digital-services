@@ -71,7 +71,7 @@ form p {clear: left; margin: 1em 0 0;}
 .center {text-align: center;}
 
 footer { padding: 2em 7vw; margin: 3em 0 0 0; overflow: auto; clear: left;}
-footer p, footer ul {font-size: 1em; display: inline-block; width: content-fit;}
+footer p, footer ul {font-size: 1em; display: inline-block; width: content-fit; padding: 0;}
 .social {float: right; list-style: none;}
 .social .icon {background-position: center left; background-repeat: no-repeat; background-size: 1em; padding-left: 1.6em;}
 
@@ -82,10 +82,10 @@ footer p, footer ul {font-size: 1em; display: inline-block; width: content-fit;}
 	.services {margin: 1em 0 0 0; width: 100vw; padding: 1em;}
 	
 	#hero {overflow: auto; background: rgba(34, 34, 34, 0.6);}
-	#hero img {float: right; width: 50vw;}
-	#hero div {float: left; position: static; box-sizing: border-box; width: 50vw; margin-top: 4em; padding: 0 1em; text-align: center; background: none;}
-	#hero h1 {font-size: 2.4em;  text-align: center; margin: 0; width: auto;}
-	#hero p {font-size: 1.2em; margin: 1.2em 0 0; padding: 0 2em; width: auto;}
+	#hero img {float: right; width: 30vw;}
+	#hero div {float: left; position: static; box-sizing: border-box; width: 50vw; margin-top: 2.5em; padding: 0 1em; background: none;}
+	#hero h1 {font-size: 2.4em; margin: 0; width: auto;}
+	#hero p {font-size: 1.2em; margin: 1.2em 0 0; width: auto;}
 	#hero h1 span {background: none;}
 	
 	.services {box-sizing: border-box; background: none; box-shadow: none; border: none;}
@@ -105,12 +105,17 @@ footer p, footer ul {font-size: 1em; display: inline-block; width: content-fit;}
 
 @media screen and (max-width: 600px) {
 
-	p {font-size: 1em;}
-    #hero {position: static;}
-	#hero img {border-radius: 100%; width: 200px; height: 200px; margin: 3em auto 0; border: 1px solid #666; box-shadow: 0 6px 8px #222; float: none;}
-	#hero div {position: static; text-align: center; padding: 2em 4em; margin: 0; width: 100vw; box-sizing: border-box; float: none;}
+	p, ul {font-size: 1em;}
+	#hero {display: block; overflow: auto;}
+	#hero img {width: 200px; height: 200px; margin: 3em auto 0; float: none;}
+	#hero div {text-align: center; padding: 2em 4em 3em; margin: 0; width: 100vw; box-sizing: border-box; float: none;}
 	#hero h1 {font-size: 2em;}
 	#hero h1 span {background: none;}
 	#hero p {font-size: 1em; padding: 0;}
 
+	.card.portrait img, .card.portrait figcaption {width: 100%;}
+	
+	div.services {margin-top: 0;}
+	footer {margin-top: 0; text-align: center;}
+	footer .social {float: none; margin-top: 1.6em;}
 }
