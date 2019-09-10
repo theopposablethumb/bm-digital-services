@@ -10,16 +10,17 @@ class Image extends React.Component {
         } else {
             return (
                 <figcaption>
-                    <p>{this.props.caption}</p>
+                    <h2>{this.props.caption}</h2>
+                    <p className="date icon-calendar">{this.props.date}</p>
                     <ul className="meta">
-                        <li>Camera: {this.props.camera}</li>
-                        <li>Lens: {this.props.lens}</li>
-                        <li>Focal length: {this.props.focal}</li>
-                        <li>Shutter speed: {this.props.shutter}</li>
-                        <li>Aperture: {this.props.fstop}</li>
-                        <li>ISO: {this.props.iso}</li>
+                        <li className="icon-camera">Camera: {this.props.camera}</li>
+                        <li className="icon-isight">Lens: {this.props.lens}</li>
+                        <li className="icon-isight">Focal length: {this.props.focal}</li>
+                        <li className="icon-aperture">Shutter speed: {this.props.shutter}</li>
+                        <li className="icon-aperture">Aperture: {this.props.fstop}</li>
+                        <li className="icon-camera">ISO: {this.props.iso}</li>
                     </ul>
-                    <p className="date">{this.props.date}</p>
+                    
                 </figcaption>
             );
         }
