@@ -30,7 +30,7 @@ nav a {display: inline-block; padding: 0.5em 1em;}
 .gallery figure {display: inline-block; overflow: hidden; margin: 16px; border-radius: 4px; box-shadow: 0 0 10px #222;}
 .gallery figure:hover {margin: 11px; box-shadow: 0 0 20px #222;}
 .gallery figure img {display: block; height: 200px; width: 200px; object-fit: cover;}
-.gallery figure img:hover {height: 205px; width: 205px;}
+.gallery figure img:hover {height: 210px; width: 205px;}
 
 .card {width: 80vw; background: #2d2d2d; margin: 3em auto; border: 1px solid #111; border-radius: 6px; overflow: hidden; box-shadow: 0 0 10px #222;}
 .card figure {margin: 0;}
@@ -40,9 +40,11 @@ nav a {display: inline-block; padding: 0.5em 1em;}
 .card figcaption {padding: 1em 1.6em; box-sizing: border-box;}
 .card.portrait figcaption {width: 33%;}
 
-ul.meta {list-style: none; padding: 0;}
+ul.meta {list-style: none; padding: 0; margin-top: 1.6em;}
 ul.meta li {line-height: 2.4em;}
 ul.meta li:before, p.date:before {margin-right: 0.6em; color: #FFDF7D;}
+.landscape ul.meta {display: flex row wrap; justify-content: left; width: 100%;}
+.landscape .meta li {flex: 1; display: inline-block; width: 33%;}
 
 div.fullWidth {width: 90vw; padding: 1em; margin: 3em auto 1em auto;}
 
@@ -96,7 +98,9 @@ footer p, footer ul {font-size: 1em; display: inline-block; width: content-fit; 
 	.flex section:last-of-type {margin-right: 2em;}
 	
 	.services .icon {background-position: center 1em; padding-top: 5em;}
-
+	
+	.gallery figure img, .gallery figure img:hover {height: 160px; width: 160px;}
+	
     form {margin-top: 3.2em;}
     label, input, textarea, button {width: 90vw; float: none;}
     input, textarea {margin: 0.8em 0 2.4em;}
@@ -116,6 +120,9 @@ footer p, footer ul {font-size: 1em; display: inline-block; width: content-fit; 
 	.card.portrait img, .card.portrait figcaption {width: 100%;}
 	
 	div.services {margin-top: 0;}
+
+	.gallery figure img, .gallery figure img:hover {height: 160px; width: 110px;}
+
 	footer {margin-top: 0; text-align: center;}
 	footer .social {float: none; margin-top: 1.6em;}
 }

@@ -88,7 +88,7 @@ class PhotoDetail extends React.Component {
         } else {
           return (
             <div className="card landscape">
-              <Image img={this.state.photo.imgUrl} alt={this.state.photo.caption} title={this.state.photo.alt} caption={this.state.photo.caption} date={this.state.photo.date} camera={this.state.exif.camera} lens={this.state.exif.lens} focal={this.state.exif.focalLength} shutter={this.state.exif.shutterSpeed} fstop={this.state.exif.aperture} iso={this.state.exif.iso} />
+              <Image img={this.state.photo.imgUrl} alt={this.state.photo.title} caption={this.state.photo.caption} date={this.state.photo.date} camera={this.state.exif.camera} lens={this.state.exif.lens} focal={this.state.exif.focalLength} shutter={this.state.exif.shutterSpeed} fstop={this.state.exif.aperture} iso={this.state.exif.iso} />
             </div>
           );
         }

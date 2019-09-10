@@ -4,13 +4,28 @@ import {Link} from 'react-router-dom';
 
 class Image extends React.Component {
     
+    renderImage() {
+        if(!this.props.id) {
+            return (
+                <img src={this.props.img} alt={this.props.alt} title={this.props.title} />
+            );
+        } else {
+            return (
+                <Link to={`/photography/${this.props.id}`}>
+                    <img src={this.props.img} alt={this.props.alt} title={this.props.title} />
+                </Link>
+            );
+        }
+    };
+
     renderImgDetails() {
         if(!this.props.caption && !this.props.date) {
             return null;
         } else {
             return (
                 <figcaption>
-                    <h2>{this.props.caption}</h2>
+                    <h2>{this.props.alt}</h2>
+                    <p>{this.props.caption}</p>
                     <p className="date icon-calendar">{this.props.date}</p>
                     <ul className="meta">
                         <li className="icon-camera">Camera: {this.props.camera}</li>
@@ -20,7 +35,6 @@ class Image extends React.Component {
                         <li className="icon-aperture">Aperture: {this.props.fstop}</li>
                         <li className="icon-camera">ISO: {this.props.iso}</li>
                     </ul>
-                    
                 </figcaption>
             );
         }
@@ -29,9 +43,7 @@ class Image extends React.Component {
     render() {
         return (
             <figure>
-                <Link to={`/photography/${this.props.id}`}>
-                    <img src={this.props.img} alt={this.props.alt} title={this.props.title} />
-                </Link>
+                {this.renderImage()}
                 {this.renderImgDetails()}
             </figure>
         )
