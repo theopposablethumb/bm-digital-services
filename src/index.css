@@ -40,11 +40,12 @@ nav a {display: inline-block; padding: 0.5em 1em;}
 	60%{ opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1);}
 }
 
-.breadcrumb {margin: 1em 7vw; display: none; padding: 1em 0;}
+.breadcrumb {width: 80vw; margin: 0 auto; text-align: right;}
+.breadcrumb a {display: block; padding: 0.4em 0;}
 
-.card {width: 80vw; background: #2d2d2d; margin: 3em auto; border: 1px solid #111; border-radius: 6px; overflow: hidden; box-shadow: 0 0 10px #222;}
+.card {width: 80vw; background: #2d2d2d; margin: 3em auto 1.6em auto; border: 1px solid #111; border-radius: 6px; overflow: hidden; box-shadow: 0 0 10px #222;}
 .card figure {margin: 0;}
-.card img, .card figcaption {float: left;}
+.card img, .card figcaption {float: left;} 
 .card.landscape img {width: 100%; height: auto;}
 .card.portrait img {width: 66%; height: auto;}
 .card figcaption {padding: 1em 1.6em; box-sizing: border-box;}
@@ -88,7 +89,8 @@ footer p, footer ul {font-size: 1em; display: inline-block; width: content-fit; 
 .social .icon-linkedin-squared:before, .social .icon-instagram:before {margin-right: 0.6em; color: #96A8FF;}
 
 @media screen and (min-width: 1400px) {
-	.card {width: 65vw;}	
+	.card {width: 65vw;}
+	.breadcrumb {width: 65vw;}
 }
 
 @media screen and (max-width: 750px) {

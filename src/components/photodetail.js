@@ -98,8 +98,10 @@ class PhotoDetail extends React.Component {
   render () {
     return(
       <div>
-        <Link className='breadcrumb' to='/photography'>Back to gallery</Link>
         {this.orientation()}
+        <div className='breadcrumb'>
+          <Link to='/photography'>Back to gallery</Link>
+        </div>
       </div>
     )
   };
