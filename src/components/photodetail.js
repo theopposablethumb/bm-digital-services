@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from './image';
+import {Link} from 'react-router-dom'
 
 const url = 'https://www.flickr.com/services/rest/?method=';
 const getInfoMethod = 'flickr.photos.getInfo&';
@@ -81,9 +82,9 @@ class PhotoDetail extends React.Component {
       orientation() {
         if(this.state.size.height > this.state.size.width){
           return (
-            <div className="card portrait">
-              <Image img={this.state.photo.imgUrl} alt={this.state.photo.title} caption={this.state.photo.caption} date={this.state.photo.date} camera={this.state.exif.camera} lens={this.state.exif.lens} focal={this.state.exif.focalLength} shutter={this.state.exif.shutterSpeed} fstop={this.state.exif.aperture} iso={this.state.exif.iso} />
-            </div>
+              <div className="card portrait">
+                <Image img={this.state.photo.imgUrl} alt={this.state.photo.title} caption={this.state.photo.caption} date={this.state.photo.date} camera={this.state.exif.camera} lens={this.state.exif.lens} focal={this.state.exif.focalLength} shutter={this.state.exif.shutterSpeed} fstop={this.state.exif.aperture} iso={this.state.exif.iso} />
+              </div>
           );
         } else {
           return (
@@ -96,7 +97,10 @@ class PhotoDetail extends React.Component {
 
   render () {
     return(
-        this.orientation()
+      <div>
+        <Link className='breadcrumb' to='/photography'>Back to gallery</Link>
+        {this.orientation()}
+      </div>
     )
   };
 }
