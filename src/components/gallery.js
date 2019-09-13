@@ -10,8 +10,7 @@ const endPoint = `${url}${method}${api_key}${query}`;
 
 class Gallery extends React.Component {
   state = {
-      photo: [],
-      
+      photo: []
     };
 
   getImages = async () => {

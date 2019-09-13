@@ -28,17 +28,30 @@ nav a {display: inline-block; padding: 0.5em 1em;}
 #hero h1 {font-size: 6em; border-bottom: none; width: 40vw; margin-top: 0.9em; text-shadow: 0 2px 4px #111;}
 #hero p {font-size: 1.6em; width: 50vw;}
 
-.gallery {display: flex; flex-flow: row wrap; justify-content: center; margin: auto;}
+.gallery {display: flex; flex-flow: row wrap; justify-content: center; margin: auto; padding: 0 7vw;}
 .gallery figure {display: inline-block; overflow: hidden; margin: 16px; border-radius: 4px; box-shadow: 0 0 10px #222;}
 .gallery figure:hover {margin: 11px; box-shadow: 0 0 20px #222;}
 .gallery figure img {display: block; height: 200px; width: 200px; object-fit: cover;}
 .gallery figure img:hover {height: 210px; width: 205px;}
 
-.gallery figure {animation-name: appear; animation-duration: 1.2s; animation-timing-function: ease-out; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal; }
-@keyframes appear {
+.gallery figure.album {position: relative;}
+.gallery figure.album img {width: 600px; height: 400px; object-fit: cover;}
+.gallery figure.album figcaption {position: absolute; left: 0; bottom: 0; width: 100%; padding: 0 1.6em 1.6em; background: rgba(34, 34, 34, 0.8);}
+.gallery figure.album h1, .gallery figure.album p {margin-top: 1em;}
+.gallery figure.album:hover {margin: 16px;}
+
+.gallery figure {animation-name: imgAppear; animation-duration: 1.2s; animation-timing-function: ease-out; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal; }
+.gallery figure.album {animation-name: albumAppear; animation-duration: 0.8s; animation-timing-function: ease-out; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal;}
+@keyframes imgAppear {
 	0%{ opacity: 50; -webkit-transform: scale3d(0.6, 0.6, 0.6); transform: scale3d(0.6, 0.6, 0.6); }
 	60%{ opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1);}
 }
+@keyframes albumAppear {
+	0%{opacity: 50; -webkit-transform: scale3d(1, 0, 1); transform: scale3d(1, 0, 1);}
+	60%{opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1);}
+}
+
+
 
 .breadcrumb {width: 80vw; margin: 0 auto; text-align: right;}
 .breadcrumb a {display: block; padding: 0.4em 0;}
@@ -117,7 +130,11 @@ footer p, footer ul {font-size: 1em; display: inline-block; width: content-fit; 
 	.services .icon {background-position: center 1em; padding-top: 5em;}
 	
 	.gallery figure img, .gallery figure img:hover {height: 160px; width: 160px;}
-	
+	.gallery figure.album img {width: 300px; height: 200px;}
+	.gallery figure.album figcaption {padding: 1em;}
+	.gallery figure.album h2 {font-size: 1.2em; margin: 0;}
+	.gallery figure.album p {display: none;}
+
 	.card img, .card figcaption {float: none;}
 	.card.portrait img {width: 100%;}
 	.card.portrait figcaption {width: 100%;}
