@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from './image';
+import Intro from './intro';
+import Breadcrumb from './breadcrumb';
 
 const url = 'https://www.flickr.com/services/rest/?method=';
 const method = 'flickr.photosets.getPhotos&';
@@ -20,7 +22,9 @@ class AlbumGallery extends React.Component {
         const apiCall = await fetch(endPoint + '&photoset_id=' + albumId);
         const data = await apiCall.json();
         const photoObject = data.photoset.photo;
+        photoObject.ids = [];
         photoObject.forEach((photo) => {
+            photoObject.ids.push(photo.id);
             let farm = photo.farm;
             let server = photo.server;
             let id = photo.id;
@@ -41,13 +45,17 @@ class AlbumGallery extends React.Component {
 
     render () {
         const images = this.state.photo.map((photo, key) =>
-          <Image img={photo.imgUrl} alt={photo.title} id={photo.id} key={key} />      
+          <Image img={photo.imgUrl} title={photo.title} alt={photo.description._content} album={this.props.match.params.album} id={photo.id} key={key} />      
         );
     
         return (
-          <div className="gallery">
+          <>
+            <Intro album={this.props.match.params.album} />
+            <div className="gallery">
                 {images}
-          </div>
+            </div>
+            <Breadcrumb />
+          </>
         )
     }
 

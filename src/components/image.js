@@ -2,17 +2,16 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 class Image extends React.Component {
-    
-    
+
     renderImage() {
         if(!this.props.id) {
             return (
-                <img src={this.props.img} alt={this.props.caption} title={this.props.alt} />
+                <img src={this.props.img} alt={this.props.alt} title={this.props.title} />
             );
         } else {
             return (
-                <Link to={`/photography/photo/${this.props.id}`}>
-                    <img src={this.props.img} alt={this.props.caption} title={this.props.alt} />
+                <Link to={`/photography/${this.props.album}/${this.props.id}`}>
+                    <img src={this.props.img} alt={this.props.alt} title={this.props.title} />
                 </Link>
             );
         }

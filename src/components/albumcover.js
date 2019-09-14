@@ -9,8 +9,7 @@ class AlbumCover extends React.Component {
                     <img src={this.props.img} alt={this.props.title} />
                 </Link>
                 <figcaption>
-                    <h2>{this.props.title}</h2>
-                    <p>{this.props.description}</p>
+                    <h2><Link to={`/photography/${this.props.id}`}>{this.props.title}</Link></h2>
                 </figcaption>
             </figure>
         )

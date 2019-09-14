@@ -28,7 +28,11 @@ nav a {display: inline-block; padding: 0.5em 1em;}
 #hero h1 {font-size: 6em; border-bottom: none; width: 40vw; margin-top: 0.9em; text-shadow: 0 2px 4px #111;}
 #hero p {font-size: 1.6em; width: 50vw;}
 
-.gallery {display: flex; flex-flow: row wrap; justify-content: center; margin: auto; padding: 0 7vw;}
+.intro, .gallery {margin: 0 auto 2.4em auto; padding: 0 7vw;}
+.intro h1 {text-align: left; margin-left: 1em; margin-right: 1em;}
+.intro p {text-align: left; margin-left: 2em; margin-right: 2em; flex-basis: 100%;}
+
+.gallery {display: flex; flex-flow: row wrap; justify-content: center;}
 .gallery figure {display: inline-block; overflow: hidden; margin: 16px; border-radius: 4px; box-shadow: 0 0 10px #222;}
 .gallery figure:hover {margin: 11px; box-shadow: 0 0 20px #222;}
 .gallery figure img {display: block; height: 200px; width: 200px; object-fit: cover;}
@@ -36,17 +40,23 @@ nav a {display: inline-block; padding: 0.5em 1em;}
 
 .gallery figure.album {position: relative;}
 .gallery figure.album img {width: 600px; height: 400px; object-fit: cover;}
-.gallery figure.album figcaption {position: absolute; left: 0; bottom: 0; width: 100%; padding: 0 1.6em 1.6em; background: rgba(34, 34, 34, 0.8);}
-.gallery figure.album h1, .gallery figure.album p {margin-top: 1em;}
+.gallery figure.album figcaption {position: absolute; left: 0; bottom: 0; box-sizing: border-box; width: 100%; padding: 0 1.2em 1.2em; background: rgba(34, 34, 34, 0.8);}
+.gallery figure.album h1 {margin-top: 1em;}
 .gallery figure.album:hover {margin: 16px;}
 
+figure.album figcaption a {color: #f7f7f7; text-decoration: none; display: block; padding: 0.4em;}
+figure.album figcaption h2 a {color: #FFDF7D;}
+figure.album figcaption h2 {margin-top: 1.2em;}
+figure.album figcaption p {margin-top: 0.2em;}
+
+
 .gallery figure {animation-name: imgAppear; animation-duration: 1.2s; animation-timing-function: ease-out; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal; }
-.gallery figure.album {animation-name: albumAppear; animation-duration: 0.8s; animation-timing-function: ease-out; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal;}
+.gallery figure.album {animation-name: cardAppear; animation-duration: 0.8s; animation-timing-function: ease-out; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal;}
 @keyframes imgAppear {
 	0%{ opacity: 50; -webkit-transform: scale3d(0.6, 0.6, 0.6); transform: scale3d(0.6, 0.6, 0.6); }
 	60%{ opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1);}
 }
-@keyframes albumAppear {
+@keyframes cardAppear {
 	0%{opacity: 50; -webkit-transform: scale3d(1, 0, 1); transform: scale3d(1, 0, 1);}
 	60%{opacity: 1; -webkit-transform: scale3d(1,1,1); transform: scale3d(1,1,1);}
 }
@@ -57,6 +67,7 @@ nav a {display: inline-block; padding: 0.5em 1em;}
 .breadcrumb a {display: block; padding: 0.4em 0;}
 
 .card {width: 80vw; background: #2d2d2d; margin: 3em auto 1.6em auto; border: 1px solid #111; border-radius: 6px; overflow: hidden; box-shadow: 0 0 10px #222;}
+.card {animation-name: cardAppear; animation-duration: 0.8s; animation-timing-function: ease-out; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal;}
 .card figure {margin: 0;}
 .card img, .card figcaption {float: left;} 
 .card.landscape img {width: 100%; height: auto;}

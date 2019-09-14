@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from './image';
-import {Link} from 'react-router-dom'
+import Breadcrumb from './breadcrumb';
 
 const url = 'https://www.flickr.com/services/rest/?method=';
 const getInfoMethod = 'flickr.photos.getInfo&';
@@ -77,6 +77,7 @@ class PhotoDetail extends React.Component {
         this.getImage();
         this.getExif();
         this.getSize();
+        console.log(this.props);
       }
 
       orientation() {
@@ -97,12 +98,11 @@ class PhotoDetail extends React.Component {
 
   render () {
     return(
-      <div>
+      <>
+        <p>{this.props.allImages}</p>
         {this.orientation()}
-        <div className='breadcrumb'>
-          <Link to='/photography'>Back to gallery</Link>
-        </div>
-      </div>
+        <Breadcrumb url={this.props.match.params.album} />
+      </>
     )
   };
 }
