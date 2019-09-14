@@ -40,7 +40,7 @@ class Albums extends React.Component {
         <AlbumCover img={photo.imgUrl} title={photo.title._content} id={photo.id} key={key} />      
       );
         return(
-          <>
+          <main>
             <div className="intro">
               <h1>Photography</h1>
               <p>Photography has been a hobby and passion of mine for 15 years, and for the past 6 years I've been combining my photography with world travel. For me photography is about sharing what I see, telling stories, and finding beauty everywhere in the world even the unexpected places.</p>
@@ -48,7 +48,7 @@ class Albums extends React.Component {
             <div className="gallery">
               { albums }
             </div>
-          </>
+          </main>
         )
     }
 }

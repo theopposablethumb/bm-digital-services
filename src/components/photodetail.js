@@ -67,8 +67,9 @@ class PhotoDetail extends React.Component {
     this.setState(prevState => {
       let size = Object.assign({}, prevState.size);
       size = data;
-      size.height = size.sizes.size[11].height;
-      size.width = size.sizes.size[11].width;
+      console.log(size);
+      size.height = size.sizes.size[10].height;
+      size.width = size.sizes.size[10].width;
       return { size };
     })
   }
@@ -77,7 +78,6 @@ class PhotoDetail extends React.Component {
         this.getImage();
         this.getExif();
         this.getSize();
-        console.log(this.props);
       }
 
       orientation() {
@@ -98,11 +98,10 @@ class PhotoDetail extends React.Component {
 
   render () {
     return(
-      <>
-        <p>{this.props.allImages}</p>
+      <main>
         {this.orientation()}
         <Breadcrumb url={this.props.match.params.album} />
-      </>
+      </main>
     )
   };
 }

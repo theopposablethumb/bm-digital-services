@@ -49,13 +49,13 @@ class AlbumGallery extends React.Component {
         );
     
         return (
-          <>
+          <main>
             <Intro album={this.props.match.params.album} />
             <div className="gallery">
                 {images}
             </div>
             <Breadcrumb />
-          </>
+          </main>
         )
     }
 

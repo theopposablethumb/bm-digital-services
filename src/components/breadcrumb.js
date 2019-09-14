@@ -7,12 +7,14 @@ class Breadcrumb extends React.Component {
         if(!this.props.url) {
             return (
                 <div className='breadcrumb'>
+                    <p>All photography &copy; Brendan Meachen {(new Date().getFullYear())}</p>
                     <Link to={'/photography'}>Back to albums</Link>
                 </div>
             );
         } else {
             return (
                 <div className='breadcrumb'>
+                    <p>All photography &copy; Brendan Meachen {(new Date().getFullYear())}</p>
                     <Link to={`/photography/${this.props.url}`}>Back to gallery</Link>
                 </div>
             );
