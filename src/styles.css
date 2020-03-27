@@ -1,0 +1,160 @@
+/* Colour Scheme
+
+Darkest: #0F1422
+BG Light: #E6B1A4
+BG Mid: #B59198
+BG Dark: #7B707C
+Highlight: #FAD7C3
+Header and footer: #46495B
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700&display=swap');
+
+body {font-size: 16px; font-family: 'Merriweather', serif; margin: 0; padding: 0; background: #46495B; color: #0F1422;}
+header, footer {padding: 1em 20%; background: #46495B;}
+main {}
+
+h1, h2, h3, nav {font-family: 'Lato', sans-serif; font-weight: 700;}
+nav {font-size: 1.2em; font-weight: 400;}
+h1 {font-size: 2em; line-height: 1.2em;  margin: 1.2em 0 0 0;}
+h2 {font-size: 1.6em;  margin: 1.2em 0 0 0;}
+h3 {font-size: 1.4em; margin: 1.2em 0 0 0;}
+p, ul, ol, label, input, textarea, button {font-size: 1.2em; line-height: 1.6em; margin: 1.6em 0 0 0;}
+blockquote {font-size: 1.4em; line-height: 1.6em; margin: 1.2em 2em 1.6em 2em; color: #7B707C; font-style: italic; position: relative; z-index: 1;}
+blockquote::after{content: '\201C'; font-size: 8em; font-style: normal; color: #FAD7C3; position: absolute; top: 0.3em; left: -0.3em; z-index: -1;}
+
+header {position: fixed; z-index: 2; width: 100%; box-sizing: border-box; box-shadow: 0px 2px 8px 0px rgba(70,73,91,0.8);}
+footer {padding-bottom: 2em; overflow: hidden;}
+
+header h1 {display: inline-block; width: fit-content; font-size: 1.4em; font-weight: normal; letter-spacing: .07em; color: #E6B1A4; margin: 0.5em 0;}
+header nav {float: right;}
+nav a {display: inline-block; padding: .5em; color: #E6B1A4;}
+nav a:hover {color: #FAD7C3;}
+nav a:visited {color: #FAD7C3;}
+
+footer div {float: left;}
+footer ul {float: right; list-style: none; padding: 0;}
+footer p, footer ul {font-size: 1em; margin: 1em 0 0 0; color: #E6B1A4;}
+footer li:last-child {margin-top: 1em;}
+footer a {color: #FAD7C3;}
+
+.cover {height: 80vh; width: 100vw; padding: 0; background: url('https://farm66.staticflickr.com/65535/48726114616_f216831f57_b.jpg') no-repeat center center; background-size: cover;}
+.cover.contact {height: 60vh; width: 100vw; padding: 0; background: url('https://farm66.staticflickr.com/65535/48726511151_6c8ac7a129_b.jpg') no-repeat center center; background-size: cover; }
+
+div.centered {padding: 5vh 20vw 10vh; background: #FAD7C3;}
+div.photography {background:  #E6B1A4;}
+div.photograph {background:  #46495B; position: relative; padding-top: 5vh;}
+.photograph h1 {margin: 3em 0 0 20%; color: #FAD7C3;}
+div.contact {background: #7B707C; color: #E6B1A4;}
+div.contact a {color: #FAD7C3; }
+div.contact a:hover {color: #E6B1A4;}
+div.contact a:visited {color: #E6B1A4;}
+
+article {padding: 1.5em 1.5em; margin: 2em 0 0; background: #F5EEE1; box-shadow: 0 0 2px #B59198; border-radius: 4px;}
+article h1:first-child, article h2:first-child {margin: 0;}
+.intro article, .blog article {position: relative; padding: 0; background: none; box-shadow: none;}
+article.intro {background: none; box-shadow: none; margin-top: 6em;}
+article img {width: 100%; height: 300px; background: #7B707C; margin: 1.6em 0 0.8em;}
+article img:first-child {margin: 0;}
+img.profile {position: absolute; top: 0; left: -120px; width: 75px; height: auto; border: 5px solid #B59198; margin: 0; background: #7B707C;}
+
+
+figure.album {display: inline-block; background: #7B707C; width: 47%; height: 150px; margin: 2% 2% 2% 0; box-sizing: border-box;}
+
+figure.photo, .navigation {display: inline-block; width: 60%; margin: 2em 20% 2em 20%; box-sizing: border-box;}
+figure.photo {margin-top: 1em; overflow: hidden;} 
+figure.photo img {box-shadow: 0 0 4px #0F1422; border-radius: 4px;}
+figure.photo.landscape img {width: 100%;}
+figure.photo.portrait img {width: 66%; float: left;}
+
+figcaption {padding: 1em 0; box-sizing: border-box; color: #FAD7C3; }
+.landscape figcaption {padding-top: 2em;}
+.portrait figcaption {float: left; padding: 0 0 0 1em; width: 33%;} 
+.portrait figcaption p:first-child {margin-top: 0;}
+figcaption h2 {margin: 0;}
+figcaption p, figcaption ul, figcaption ol {font-size: 1em;}
+
+article ul.meta {margin-top: 1em; line-height: 1em;}
+ul.meta {list-style: none; padding: 0; line-height: 2.4em;}
+article ul.meta li, .landscape ul.meta li {display: inline-block; width: 33%;}
+ul.meta span {font-weight: bold;}
+article ul.meta li {width: fit-content; font-size: 0.9em; color: #7B707C; font-style: italic; margin: 0 1em 0 0}
+
+a#next {position: absolute; top: 40%; left: 5vw; font-size: 6em; color: #FAD7C3; text-decoration: none;}
+a#previous {position: absolute; top: 40%; right: 5vw; font-size: 6em; color: #FAD7C3; text-decoration: none;}
+
+form {margin: 1.6em 0 3em 0; overflow: auto;}
+label, input, textarea, button {float: left; padding: 0.6em; margin: 1.6em 0; box-sizing: border-box;}
+label {width: 12vw; text-align: right; padding: 0.6em 0.8em 0.6em 0;}
+input, textarea, button {border-radius: 4px; border: 1px solid #46495B; box-shadow: 0px 0px 4px 0px rgba(70,73,91,0.8); background: #FAD7C3; font-family: 'Merriweather', serif; width: 40vw;}
+input:focus, textarea:focus {border: 2px solid #46495B; box-shadow: 0px 0px 8px 0px rgba(70,73,91,0.8)}
+label, button {clear: left;}
+button {background: #E6B1A4; margin: 1em 0 0 12vw; box-shadow: none;}
+button:hover {background: #FAD7C3;}
+
+@media screen and (max-width: 1260px) {
+	footer div, footer ul {float: none;}
+	footer ul {margin-top: 2.2em;}
+}
+
+@media screen and (max-width: 1180px) {
+	header {text-align: center; padding: 1em 10%; position: static;}
+	header h1 {font-size: 1.8em;}
+	header nav {float: none;}
+	nav a {font-size: 1.3em;}
+	nav a:first-child {padding-left: 0;}
+	
+	form {margin-top: 3.2em; width: 80%;}
+    label, input, textarea, button {width: 100%; float: none;}
+    input, textarea {margin: 0.8em 0 2.4em;}
+    button {margin: 0;} 
+}
+
+@media screen and (max-width: 800px) {
+	form {width: 100%;}
+}
+
+@media screen and (max-width: 600px) {
+	footer {padding: 1em 20%;}
+	footer div, footer ul {float: none;}
+	
+	p, ul, ol, label, input, textarea, button {font-size: 1em;}
+	
+	img.profile {position: static; float: left; margin: 1.6em 1em 0 0;}
+	
+	article {padding: 3.2em 0 1.8em; margin: 0.15em; background: none; border-bottom: 2px solid  #7B707C; border-top: 2px solid  #7B707C; box-shadow: none; border-radius: 0;}
+	article.intro {border-top: none; margin-top: 0;}
+	.intro article, .blog article {border: none;}
+	
+	figure.album {display: block; width: 100%; margin: 0.8em 0 0;}
+	figure.album:first-child, article.intro {margin-top: 1.6em;}
+	
+	figure.photo, .navigation {display: block; margin: 3.2em auto 0; width: 80%}
+	.navigation {margin-top: 0; margin-bottom: 3.2em;}
+	figure.photo.portrait img {width: 100%; float: none;}
+	.portrait figcaption {width: 100%}
+	.portrait ul.meta li, .landscape ul.meta li {display: inline-block; width: 49%;}
+	
+	a#next {position: static; font-size: 1em; color: #FAD7C3; text-decoration: underline;}
+	a#previous {position: static; font-size: 1em; color: #FAD7C3; text-decoration: underline;}
+}
+
+@media screen and (max-width: 555px) {
+	header {text-align: left; padding: 1em 0 0;}
+	header h1, nav a {display: block; padding: .8em 10%;}
+	nav a {font-size: 1.2em; background: #0F1422; border-bottom: 1px solid #46495B; text-decoration: none;}
+	nav a:first-child {padding-left: 10%;}
+	nav a:hover, nav a:active {background: #46495B;}
+}
+
+@media screen and (max-width: 450px) {
+	footer {padding: 1em 0;}
+	
+	footer p, footer ul {display: block; padding: .8em 10%;}
+	footer p {margin: 0;}
+	
+	div.centered {padding: 5vh 10vw 10vh;}
+	
+	figure.photo {width: 90%;}
+	.portrait ul.meta li, .landscape ul.meta li {width: 100%; display: block;}
+}
