@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Header from '../components/static/Header';
-import Home from '../components/static/Home';
-import Footer from '../components/static/Footer';
-import AlbumList from '../components/AlbumList';
-import Album from '../components/Album';
-import Photo from '../components/Photo';
-import Contact from '../components/static/Contact'
+import Header from './static/Header';
+import Home from './static/Home';
+import Footer from './static/Footer';
+import AlbumList from './photo/AlbumList';
+import Album from './photo/Album';
+import Photo from './photo/Photo';
+import Contact from './static/Contact'
 
 const App = () => {
     return (

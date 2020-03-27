@@ -1,6 +1,6 @@
 import React from 'react';
 import Intro from './Intro';
-import AlbumList from '../AlbumList';
+import AlbumList from '../photo/AlbumList';
 import Contact from './Contact';
 
 const Home = () => {

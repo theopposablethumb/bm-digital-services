@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchAlbums } from '../actions';
+import { fetchAlbums } from '../../actions';
 
 class AlbumList extends React.Component {
 
@@ -17,14 +17,26 @@ class AlbumList extends React.Component {
         }
     }
 
+    renderClassName() {
+        if (!this.props.location) {
+            return null;
+        } else {
+            return 'album'
+        }
+    }
+
     renderAlbums() {
         return this.props.albums.map(album => {
-            let imgUrl = `https://farm${album.farm}.staticflickr.com/${album.server}/${album.primary}_${album.secret}_w.jpg`;
+            let imgUrl = `https://farm${album.farm}.staticflickr.com/${album.server}/${album.primary}_${album.secret}_c.jpg`;
             let imgTitle = album.title._content;
             let imgCaption = album.description._content;
             return (
                 <figure className="album" key={album.id}>
-                    <img src={imgUrl} alt={imgCaption} title={imgTitle} />
+                    <Link to={{
+                                pathname: `photography/${album.title._content.toLowerCase()}`,
+                                state: {albumId: album.id, title: album.title._content, description: album.description._content}
+                            }}><img src={imgUrl} alt={imgCaption} title={imgTitle} />
+                        </Link>
                     <figcaption>
                         <h2>
                             <Link to={{
@@ -48,7 +60,7 @@ class AlbumList extends React.Component {
     render() {
         console.log(this.props);
         return (
-            <div className="centered photography">
+            <div className={`centered photography ${this.renderClassName()}`}>
                 {this.renderTitle()}
                 {this.renderAlbums()}
             </div>

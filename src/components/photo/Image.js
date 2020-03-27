@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchSizes, fetchPhoto } from '../actions';
+import { fetchSizes, fetchPhoto } from '../../actions';
 import PhotoMeta from './PhotoMeta';
 
 class Image extends React.Component {
@@ -31,7 +31,7 @@ class Image extends React.Component {
 
     renderImage() {
         if (this.props.image.size.length > 0) {
-            return <img src={this.props.image.size[this.props.image.size.length - 1].source} alt={this.props.alt} title={this.props.title} />
+            return <img src={this.props.image.size[this.props.image.size.length - 3].source} alt={this.props.alt} title={this.props.title} />
         } else { 
             return <p>Engage!</p>
         }
@@ -42,7 +42,7 @@ class Image extends React.Component {
         if(sizeArray.length === 0) {
             return null;
         } else {
-            if(sizeArray[sizeArray.length - 1].height > sizeArray[sizeArray.length-1].width){
+            if(sizeArray[sizeArray.length - 3].height > sizeArray[sizeArray.length - 3].width){
             return 'portrait';
             } else {
             return 'landscape';

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Image from './Image';
-import { fetchPhoto, fetchPhotos } from '../actions';
+import { fetchPhoto, fetchPhotos } from '../../actions';
 
 class PhotoDetail extends React.Component {
     constructor(props) {

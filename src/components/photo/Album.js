@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchPhotos } from '../actions';
+import { fetchPhotos } from '../../actions';
 
 class Album extends React.Component {
 
@@ -78,11 +78,13 @@ class Album extends React.Component {
     render(){
         console.log(this.props);
         return (
-            <div className="centered">
+            <div className="centered photography album">
                 {this.renderTitle()}
                 <p>{this.props.location.state.description}</p>
                 {this.renderPrimaryPhoto()}
-                {this.renderPhotos()}
+                <div className="photos">
+                    {this.renderPhotos()}
+                </div>
             </div>
         );
     }
